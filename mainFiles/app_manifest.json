@@ -1,17 +1,17 @@
 {
     "display_information": {
-        "name": "Sock Thief Quest",
+        "name": "Grass Quest",
         "description": "Ping me to go on a quest in the Bag universe!",
         "background_color": "#00248f"
     },
     "features": {
         "bot_user": {
-            "display_name": "Sock Thief Quest",
+            "display_name": "Grass Quest",
             "always_online": true
         },
         "slash_commands": [
             {
-                "command": "/st-reset-user",
+                "command": "/grass-reset-user",
                 "description": "delete a user's data",
                 "usage_hint": "<@user>",
                 "should_escape": true
