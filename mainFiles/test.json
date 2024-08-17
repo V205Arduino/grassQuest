@@ -1,59 +1,5 @@
 [
     {
-        "id": "U05QJ4CF5QT",
-        "current_path": "farmer_initial",
-        "name": "Thought",
-        "interaction_id": "1723932044.481169",
-        "path_states": {
-            "farmer_initial": {
-                "messages": [
-                    {
-                        "role": "assistant",
-                        "content": "A tall figure wearing a hat walks towards you,  \"Hello, I'm the farmer. Could you help me with something?\""
-                    },
-                    {
-                        "role": "user",
-                        "content": "hi yes go ahead"
-                    },
-                    {
-                        "role": "assistant",
-                        "content": "Farmer Smallberry looks relieved and continues, \"Thank you! My cows are in desperate need of grass, but it's winter, and I can't find enough for them to eat. If they don't get sufficient food soon, they might starve. Could you help me find some grass? It would mean the world to me and my cows!\""
-                    },
-                    {
-                        "role": "user",
-                        "content": "yes how?"
-                    },
-                    {
-                        "role": "assistant",
-                        "content": "Farmer Smallberry brightens up, \"Thank you so much! Here\u2019s what I need you to do:\n\n1. Head east towards the meadow. There should be some patches of grass that might still be green, even in winter.\n2. Collect as much grass as you can carry.\n3. Bring it back here, and I'll make sure to reward you for your help!\n\nDoes that sound doable?\""
-                    },
-                    {
-                        "role": "user",
-                        "content": "yup doing"
-                    },
-                    {
-                        "id": "call_whqAN5hTwabam8w8c9RRi8mU",
-                        "function": {
-                            "arguments": "{}",
-                            "name": "farmer_agree"
-                        },
-                        "type": "function"
-                    },
-                    {
-                        "role": "tool",
-                        "content": "Farmer Smallberry has convinced the player to help."
-                    }
-                ]
-            }
-        },
-        "messager_state": {
-            "channel": "C07HNJG1FPT",
-            "last_unprocessed_message": null,
-            "last_processed_message": 1723932142.910719
-        },
-        "plugin_state": {}
-    },
-    {
         "id": "U066LL4JBDL",
         "current_path": "farmer_initial",
         "name": "ave",

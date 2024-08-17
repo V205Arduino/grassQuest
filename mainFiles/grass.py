@@ -46,7 +46,7 @@ quest = Quest(
                 ChangePathAction("farmer_initial") # ChangePathAction("stocking_initial")
             )
         ),
-         
+     
         Path(
             id="farmer_initial",
             starts_without_player_action=False,
@@ -95,7 +95,7 @@ quest = Quest(
             id="head-to-grass",
             starts_without_player_action=False,
             action_resolver=SequentialActionResolver(
-                MessageAgentAction("A hobbit walks from the side of the road, crosses their arms, and stops in front of you, \"What are you doing here?\" ", name="Hobbit", icon_url="https://example.com/icon.png"),
+                MessageAgentAction("A hobbit walks from the side of the road, crosses their arms, and stops in front of you, \"What are you doing here? Scram!\" ", name="Hobbit", icon_url="https://example.com/icon.png"),
                 ChangePathAction("farmer_initial") # ChangePathAction("stocking_initial")
             ),
         ),  
