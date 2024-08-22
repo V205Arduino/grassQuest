@@ -1,3 +1,8 @@
+'''
+Don't use me
+I'm just the savefile
+'''
+
 import asyncio
 from longchain.core.dataclasses import Message, PathResult, Player
 from longchain.core.path import Path
@@ -16,7 +21,7 @@ if "ENVIRONMENT" not in os.environ or os.environ["ENVIRONMENT"] != "production":
     import dotenv
     dotenv.load_dotenv(override=True)
 
-ENV_VARS_REQUIRED = ["ENVIRONMENT", "SLACK_BOT_TOKEN", "SLACK_APP_TOKEN", "HOME_CHANNEL_ID", "DATA_FILEPATH", "BOT_USER_ID", "OPENAI_API_KEY", "OPENAI_API_URL", "ADMINS", "BAG_APP_ID", "BAG_APP_KEY", "QUEST_OWNER_ID"]
+ENV_VARS_REQUIRED = ["ENVIRONMENT", "GRASS_SLACK_BOT_TOKEN", "GRASS_SLACK_APP_TOKEN", "HOME_CHANNEL_ID", "DATA_FILEPATH", "BOT_USER_ID", "OPENAI_API_KEY", "OPENAI_API_URL", "ADMINS", "BAG_APP_ID", "BAG_APP_KEY", "QUEST_OWNER_ID"]
 if not all([var in os.environ for var in ENV_VARS_REQUIRED]):
     raise Exception(f"Missing the following environment variables: {', '.join([var for var in ENV_VARS_REQUIRED if not var in os.environ])}")
 
@@ -91,29 +96,22 @@ quest = Quest(
                 ChangePathAction("head-to-grass") # ChangePathAction("stocking_initial")
             )
         ),  
-        Path(
-            id="head-to-grass",
-            starts_without_player_action=False,
-            action_resolver=SequentialActionResolver(
-                MessageAgentAction("A hobbit walks from the side of the road, crosses their arms, and stops in front of you, \"What are you doing here? Scram!\" ", name="Hobbit", icon_url="https://example.com/icon.png"),
-                ChangePathAction("farmer_initial") # ChangePathAction("stocking_initial")
-            ),
-        ),  
-
+        
+       
         Path(
             starts_without_player_action=True,
             id="completed",
             action_resolver=SequentialActionResolver(
                 MessageAgentAction(f"You have completed the quest! You can try again by pinging <@{os.environ['BOT_USER_ID']}> in <#{os.environ['HOME_CHANNEL_ID']}>.", name="Completed", icon_url="https://example.com/icon.png"),
                 RemovePlayerAction()
-            )
-        )
+            ),
+        ),
 
     ],
     
     message_sender=SlackMessager(
-        bot_token=os.environ["SLACK_BOT_TOKEN"],
-        app_token=os.environ["SLACK_APP_TOKEN"],
+        bot_token=os.environ["GRASS_SLACK_BOT_TOKEN"],
+        app_token=os.environ["GRASS_SLACK_APP_TOKEN"],
         start_path="welcome",
         datastore=datastore,
         active_channel=os.environ["HOME_CHANNEL_ID"],

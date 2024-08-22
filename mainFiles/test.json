@@ -40,5 +40,75 @@
             "last_processed_message": 1723932165.405549
         },
         "plugin_state": {}
+    },
+    {
+        "id": "U05QJ4CF5QT",
+        "current_path": "grass_image",
+        "name": "Thought",
+        "interaction_id": "1724364133.394039",
+        "path_states": {
+            "farmer_initial": {
+                "messages": [
+                    {
+                        "role": "assistant",
+                        "content": "A tall figure wearing a hat walks towards you,  \"Hello, I'm the farmer. Could you help me with something?\""
+                    },
+                    {
+                        "role": "user",
+                        "content": "ok"
+                    },
+                    {
+                        "id": "call_2ZEOtE8quwEKGR4BetA7lkDz",
+                        "function": {
+                            "arguments": "{}",
+                            "name": "farmer_agree"
+                        },
+                        "type": "function"
+                    },
+                    {
+                        "role": "tool",
+                        "content": "Farmer Smallberry has convinced the player to help."
+                    }
+                ]
+            },
+            "grass_image": {
+                "messages": [
+                    {
+                        "role": "assistant",
+                        "content": "The hobbit smiles, \"Well, now go and get the grass for the farmer, but don't forget my image! \" "
+                    },
+                    {
+                        "role": "user",
+                        "content": "I go up the road"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "As you move up the road, the grassy field begins to fade behind you, and the path leads you deeper into the woods. The trees whisper secrets in the wind, and you can sense the allure of adventure ahead.\n\nBefore you proceed, remember that the hobbit kindly asked for a PNG image of grass as a favor. Have you thought about uploading that image? You know it\u2019s necessary to move forward."
+                    },
+                    {
+                        "role": "user",
+                        "content": "ok"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "Great! Please upload the PNG image of grass so we can continue."
+                    },
+                    {
+                        "role": "user",
+                        "content": "okhere it is"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "It seems there was no image uploaded. Please upload a PNG image of grass so we can assist the art-loving hobbit."
+                    }
+                ]
+            }
+        },
+        "messager_state": {
+            "channel": "C07HNJG1FPT",
+            "last_unprocessed_message": null,
+            "last_processed_message": 1724364337.757969
+        },
+        "plugin_state": {}
     }
 ]
